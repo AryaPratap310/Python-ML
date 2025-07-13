@@ -1,194 +1,194 @@
 import numpy as np
 
-# # Task 1.1: Creating Arrays
+# Task 1.1: Creating Arrays
 
-# # 1D array 
-# array_1 = np.arange(1, 11)
-# # [ 1  2  3  4  5  6  7  8  9 10]
+# 1D array 
+array_1 = np.arange(1, 11)
+# [ 1  2  3  4  5  6  7  8  9 10]
 
-# # 2D array 
-# array_2 = np.arange(1, 10).reshape(3, 3)
-# #  [[1 2 3]
-# #  [4 5 6]
-# #  [7 8 9]]
-
-
-# # 3D array 
-# array_3 = np.random.random(size=(3,5,3))
-
-# # [[[0.05172483 0.03422188 0.70614354]
-# #   [0.31700106 0.2007625  0.43827837]
-# #   [0.70942055 0.48297352 0.16497463]
-# #   [0.39293635 0.86424137 0.55206543]
-# #   [0.19617297 0.78342425 0.41560642]]
-
-# #  [[0.72609534 0.03642539 0.86055202]
-# #   [0.94807527 0.32915841 0.23614317]
-# #   [0.14478331 0.99019009 0.78550339]
-# #   [0.06296025 0.71302465 0.98741991]
-# #   [0.65631992 0.48079435 0.73575109]]
-
-# #  [[0.04683876 0.04739956 0.93417858]
-# #   [0.57121855 0.73185838 0.72855787]
-# #   [0.15021761 0.90692148 0.20285787]
-# #   [0.83048448 0.24455228 0.95362065]
-# #   [0.90015066 0.86916544 0.77719587]]]
+# 2D array 
+array_2 = np.arange(1, 10).reshape(3, 3)
+#  [[1 2 3]
+#  [4 5 6]
+#  [7 8 9]]
 
 
+# 3D array 
+array_3 = np.random.random(size=(3,5,3))
 
-# # Task 1.2: Display shape, size, and datatype
+# [[[0.05172483 0.03422188 0.70614354]
+#   [0.31700106 0.2007625  0.43827837]
+#   [0.70942055 0.48297352 0.16497463]
+#   [0.39293635 0.86424137 0.55206543]
+#   [0.19617297 0.78342425 0.41560642]]
 
-# # For 1D array
-# print(array_1.shape,array_1.size,array_1.dtype)
-# # (10,) 10 int32
+#  [[0.72609534 0.03642539 0.86055202]
+#   [0.94807527 0.32915841 0.23614317]
+#   [0.14478331 0.99019009 0.78550339]
+#   [0.06296025 0.71302465 0.98741991]
+#   [0.65631992 0.48079435 0.73575109]]
 
-
-# # For 2D array
-# print(array_2.shape,array_2.size,array_2.dtype)
-# # (3, 3) 9 int32
-
-# # For 3D array
-# print(array_3.shape,array_3.size,array_3.dtype)
-# # (3, 5, 3) 45 float64
+#  [[0.04683876 0.04739956 0.93417858]
+#   [0.57121855 0.73185838 0.72855787]
+#   [0.15021761 0.90692148 0.20285787]
+#   [0.83048448 0.24455228 0.95362065]
+#   [0.90015066 0.86916544 0.77719587]]]
 
 
 
-# # Task 2.1 
-# data = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-# array = np.array(data)
+# Task 1.2: Display shape, size, and datatype
 
-# # Task 2.2:
-
-# first_three = array[:3]
-# alternate_elements = array[::2]
-# reversed_array = array[::-1]
-
-# # Task 2.3
-# print(array)
-# # [10 20 30 40 50 60 70 80 90]
-
-# print(first_three)
-# # [10 20 30]
-
-# print(alternate_elements)
-# # [10 30 50 70 90]
-
-# print(reversed_array)
-# # [90 80 70 60 50 40 30 20 10]
-
-# # Task 3.1 
-# A = np.random.randint(1, 20, size=5)
-# B = np.random.randint(1, 20, size=5)
-# print(A)
-# # [17  3 14 13 12]
-# print(B)
-# # [13 12 14  2 18]
-
-# # Task 3.2
-
-# print("Addition:", A+B)
-# # [30 15 28 15 30]
-
-# print("Subtraction:", A-B)
-# # [ 4 -9  0 11 -6]
-
-# print("Multiplication:", A*B)
-# # [221  36 196  26 216]
-
-# print("Division:", A/B)
-# # [1.30769231 0.25       1.         6.5        0.66666667]
-
-# # Dot product
-# print(np.dot(A, B))
-# # 695
-
-# print(np.mean(A))
-# # 11.8
-# print(np.median(A))
-# # 13.0
-# print(np.std(A))
-# # 4.707440918375928
-# print(np.var(A))
-# # 22.160000000000004
-# print(np.max(B),np.argmax(B))
-# # 18 4
-# print(np.min(B),np.argmin(B))
-# # 2 3
-
-# # Task 4.1
-
-# arr1 = np.arange(1, 13)
-# print(arr1)
-
-# # Task 4.2
-# arr2 = arr1.reshape(4, 3)
-# print(arr2)
-
-# arr3 = arr1.reshape(2, 2, 3)
-# print(arr3)
-
-# trans = arr2.T  
-# print(trans)
-
-# print("Original 1D array:\n", arr1)
-# print("\nReshaped to 2D (4, 3):\n", arr2)
-# print("\nReshaped to 3D (2, 2, 3):\n", arr3)
-# print("\nTransposed 2D array:\n", trans)
-# print("Shape of Transposed 2D array:", trans.shape)
-
-# # [ 1  2  3  4  5  6  7  8  9 10 11 12]
-
-# #  [[ 1  2  3]
-# #  [ 4  5  6]
-# #  [ 7  8  9]
-# #  [10 11 12]]
-
-# #  [[[ 1  2  3]
-# #   [ 4  5  6]]
-
-# #  [[ 7  8  9]
-# #   [10 11 12]]]
+# For 1D array
+print(array_1.shape,array_1.size,array_1.dtype)
+# (10,) 10 int32
 
 
-# #  [[ 1  4  7 10]
-# #  [ 2  5  8 11]
-# #  [ 3  6  9 12]]
+# For 2D array
+print(array_2.shape,array_2.size,array_2.dtype)
+# (3, 3) 9 int32
 
-# # (3, 4)
+# For 3D array
+print(array_3.shape,array_3.size,array_3.dtype)
+# (3, 5, 3) 45 float64
 
 
-# # arr=np.random.randint(10,51,size=15)
-# # print(arr)
 
-# # # ques 2
-# # print(arr[arr>25])
-# # arr[arr>25]=0
-# # print(arr)
-# # print(np.sum(arr%5==0))
-# # # [24 15 36 35 41 33 43 12 36 37 35 45 29 16 14]
-# # # [36 35 41 33 43 36 37 35 45 29]
-# # # [24 15  0  0  0  0  0 12  0  0  0  0  0 16 14]
-# # # 11
+# Task 2.1 
+data = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+array = np.array(data)
 
-# # Task 5.1
+# Task 2.2:
 
-# random_array = np.random.randint(10,51,size=15)
-# print(random_array)
+first_three = array[:3]
+alternate_elements = array[::2]
+reversed_array = array[::-1]
 
-# # Task 5.2
-# arr25=random_array[random_array>25]
-# print(arr25)
+# Task 2.3
+print(array)
+# [10 20 30 40 50 60 70 80 90]
 
-# modified_array=random_array.copy()
-# modified_array[random_array<30]=0
-# print(modified_array)
+print(first_three)
+# [10 20 30]
 
-# count_div_5=np.sum(random_array%5==0)
-# print(count_div_5)
-# # [19 14 32 11 29 34 42 36 18 46 35 32 38 20 15]
-# # [32 29 34 42 36 46 35 32 38]
-# # [ 0  0 32  0  0 34 42 36  0 46 35 32 38  0  0]
-# # 3
+print(alternate_elements)
+# [10 30 50 70 90]
+
+print(reversed_array)
+# [90 80 70 60 50 40 30 20 10]
+
+# Task 3.1 
+A = np.random.randint(1, 20, size=5)
+B = np.random.randint(1, 20, size=5)
+print(A)
+# [17  3 14 13 12]
+print(B)
+# [13 12 14  2 18]
+
+# Task 3.2
+
+print("Addition:", A+B)
+# [30 15 28 15 30]
+
+print("Subtraction:", A-B)
+# [ 4 -9  0 11 -6]
+
+print("Multiplication:", A*B)
+# [221  36 196  26 216]
+
+print("Division:", A/B)
+# [1.30769231 0.25       1.         6.5        0.66666667]
+
+# Dot product
+print(np.dot(A, B))
+# 695
+
+print(np.mean(A))
+# 11.8
+print(np.median(A))
+# 13.0
+print(np.std(A))
+# 4.707440918375928
+print(np.var(A))
+# 22.160000000000004
+print(np.max(B),np.argmax(B))
+# 18 4
+print(np.min(B),np.argmin(B))
+# 2 3
+
+# Task 4.1
+
+arr1 = np.arange(1, 13)
+print(arr1)
+
+# Task 4.2
+arr2 = arr1.reshape(4, 3)
+print(arr2)
+
+arr3 = arr1.reshape(2, 2, 3)
+print(arr3)
+
+trans = arr2.T  
+print(trans)
+
+print("Original 1D array:\n", arr1)
+print("\nReshaped to 2D (4, 3):\n", arr2)
+print("\nReshaped to 3D (2, 2, 3):\n", arr3)
+print("\nTransposed 2D array:\n", trans)
+print("Shape of Transposed 2D array:", trans.shape)
+
+# [ 1  2  3  4  5  6  7  8  9 10 11 12]
+
+#  [[ 1  2  3]
+#  [ 4  5  6]
+#  [ 7  8  9]
+#  [10 11 12]]
+
+#  [[[ 1  2  3]
+#   [ 4  5  6]]
+
+#  [[ 7  8  9]
+#   [10 11 12]]]
+
+
+#  [[ 1  4  7 10]
+#  [ 2  5  8 11]
+#  [ 3  6  9 12]]
+
+# (3, 4)
+
+
+# arr=np.random.randint(10,51,size=15)
+# print(arr)
+
+# # ques 2
+# print(arr[arr>25])
+# arr[arr>25]=0
+# print(arr)
+# print(np.sum(arr%5==0))
+# # [24 15 36 35 41 33 43 12 36 37 35 45 29 16 14]
+# # [36 35 41 33 43 36 37 35 45 29]
+# # [24 15  0  0  0  0  0 12  0  0  0  0  0 16 14]
+# # 11
+
+# Task 5.1
+
+random_array = np.random.randint(10,51,size=15)
+print(random_array)
+
+# Task 5.2
+arr25=random_array[random_array>25]
+print(arr25)
+
+modified_array=random_array.copy()
+modified_array[random_array<30]=0
+print(modified_array)
+
+count_div_5=np.sum(random_array%5==0)
+print(count_div_5)
+# [19 14 32 11 29 34 42 36 18 46 35 32 38 20 15]
+# [32 29 34 42 36 46 35 32 38]
+# [ 0  0 32  0  0 34 42 36  0 46 35 32 38  0  0]
+# 3
 
 # Task 6
 
